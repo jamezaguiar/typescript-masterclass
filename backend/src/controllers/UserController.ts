@@ -12,8 +12,14 @@ class UserController {
     const emailService = new EmailService();
 
     emailService.sendMail({
-      to: { name: 'Jamerson Aguiar', email: 'jamersonaguiar@alu.ufc.br' },
-      message: { subject: 'Bem-vindo ao sistema!', body: 'Seja bem-vindo!' },
+      to: {
+        name: 'Jamerson Aguiar',
+        email: 'jamersonaguiar@alu.ufc.br',
+      },
+      message: {
+        subject: 'Bem-vindo ao sistema!',
+        body: 'Seja bem-vindo!',
+      },
     });
 
     return res.json();
