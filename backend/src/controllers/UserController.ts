@@ -1,7 +1,12 @@
 import { Request, Response } from 'express';
 import EmailService from '../services/EmailService';
 
-const users = [{ name: 'Jamerson Aguiar', email: 'jamersonaguiar@alu.ufc.br' }];
+const users = [
+  {
+    name: 'Jamerson Aguiar',
+    email: 'jamersonaguiar@alu.ufc.br',
+  },
+];
 
 class UserController {
   async index(req: Request, res: Response) {

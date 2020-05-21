@@ -16,7 +16,11 @@ interface IMessageDTO {
 
 // DTO = Data Transfer Object
 
-class EmailService {
+interface IEmailService {
+  sendMail(request: IMessageDTO): void;
+}
+
+class EmailService implements IEmailService {
   sendMail({ to, message }: IMessageDTO) {
     console.log(`Email enviado para ${to.name}: ${message.subject}`);
   }
